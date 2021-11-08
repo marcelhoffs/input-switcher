@@ -1,7 +1,7 @@
 # Input Switcher
 
 # Introduction
-
+The application and script provided in this repository let you switch your Logitech keyboard and mouse with one click of a button to another channel.
 
 # Windows
 The **windows** folder contains the following files:
