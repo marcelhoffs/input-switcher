@@ -82,7 +82,7 @@ And rewrite it as: ***A,B,C,D,E,F,G***
 *F = always 0x00.*  
 *G = always 0x00.*  
 
-So value of C and D are unknown... how to figure that out? Well to do that we will use the Solaar application on Linux.
+So value of C and D are unknown... how to figure that out? Well to do that, we will use the Solaar application on Linux.
 Install Solaar on Linux and make sure that your keyboard and mouse are connected to channel 2, the Linux machine.
 Now open a terminal and execute the following command. This instructs Solaar to switch the device with the name "MX Keys" (the keyboard) to channel 1. So basically you command it to switch the keyboard back to Windows:
 
@@ -101,23 +101,33 @@ or
 
 *0x11 0x01 0x09 0x1E 0x00 0x00 0x00*
 
-If you repeat this test multiple times you will see that C will never change, it stays 09. Though D will change almost every time. Sometimes it is 1E, sometimes 1B... etc. Just pick one. 
-So finally our set of data then is:
+If you repeat this test multiple times you will see that C will never change, it stays 09. Though D will change almost every time. Sometimes it is 1E, sometimes 1B... etc. Just pick one. So finally our set of data, for the keyboard, then is:
 
 *A = 0x10*  
-*B = 0x01 for keyboard, 0x02 for the mouse*  
+*B = 0x01*  
 *C = 0x09*  
 *D = 0x1E*  
 *E = 0x00 to switch to Windows (channel 1), 0x01 to switch to Linux (channel 2)*  
 *F = always 0x00*  
 *G = always 0x00*  
 
+Now repeat this for the mouse and you will get this:
+
+*A = 0x10*  
+*B = 0x01*  
+*C = 0x0A*  
+*D = 0x1B*  
+*E = 0x00 to switch to Windows (channel 1), 0x01 to switch to Linux (channel 2)*  
+*F = always 0x00*  
+*G = always 0x00*  
+
+So C is specific to the device. In my case 09 is for the MX Keys keyboard and 0A for the MX Anywhere 3 mouse. This will probably be different in your case.
 So in conclusion this is what you have to put in your bat (on Windows) and shell script (on Linux):
 
-**On Windows**
-Keyboard to channel 2 : 0x10,0x01,0x09,0x1e,0x01,0x00,0x00
-Mouse to channel 2    : 0x10,0x02,0x0a,0x1b,0x01,0x00,0x00
+**On Windows**  
+Keyboard to channel 2 : 0x10,0x01,0x09,0x1e,0x01,0x00,0x00  
+Mouse to channel 2    : 0x10,0x02,0x0a,0x1b,0x01,0x00,0x00  
 
-**On Linux**
-Keyboard to channel 1 : 0x10,0x01,0x09,0x1e,0x00,0x00,0x00
-Mouse to channel 1    : 0x10,0x02,0x0a,0x1b,0x00,0x00,0x00
+**On Linux**  
+Keyboard to channel 1 : 0x10,0x01,0x09,0x1e,0x00,0x00,0x00  
+Mouse to channel 1    : 0x10,0x02,0x0a,0x1b,0x00,0x00,0x00  
