@@ -31,6 +31,13 @@ Now in your desktop environment of choice, define a custom shortcut. In my case 
 ## 3.1 - switch_to_1.sh
 This is a simple shell script for Linux to switch the input to channel 1.
 
-4 - Bind the scripts to a key
+# 4 - Bind the scripts to a key
 Personally I use this key to bind the scripts to in both Windows and Linux.
 ![Keyboard](/images/keyboard.png)
+
+## 4.1 - Windows key binding
+In Windows you can use Logitech Options to bind the key to the **switch_to_2.vbs** script.
+
+## 4.2 - Linux key binding
+In Linux it depends on the desktop environment you use. In Gnome you can do it via: **Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts**
+![Gnome](/images/gnome.png)
