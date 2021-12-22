@@ -78,7 +78,7 @@ And rewrite it as: ***A,B,C,D,E,F,G***
 *B = This is the number of the device that is linked to the Unifying receiver: 0x01 for the first device (the keyboard), 0x02 for the second device (the mouse). 0x00 Is supposed to be the Bluetooth device, but I haven't tested that.*  
 *C = ?*  
 *D = ?*  
-*E = This is the channel to switch to: 0x00 for channel 1, 0x01 for channel 2.*  
+*E = This is the channel to switch to: 0x00 for channel 1, 0x01 for channel 2 (and I guess 0x02 for channel 3)*  
 *F = always 0x00.*  
 *G = always 0x00.*  
 
