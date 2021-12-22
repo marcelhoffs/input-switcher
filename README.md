@@ -82,7 +82,7 @@ And rewrite it as: ***A,B,C,D,E,F,G***
 *F = always 0x00.*  
 *G = always 0x00.*  
 
-So value of C and D are unknown... how to figure that out? Well to do that, we will use the Solaar application on Linux.
+So value of C and D are unknown... how to figure that out? Well to do that, we will use the **Solaar** application on Linux.
 Install Solaar on Linux and make sure that your keyboard and mouse are connected to channel 2, the Linux machine.
 Now open a terminal and execute the following command. This instructs Solaar to switch the device with the name "MX Keys" (the keyboard) to channel 1. So basically you command it to switch the keyboard back to Windows:
 
