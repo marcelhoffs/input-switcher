@@ -65,7 +65,7 @@ In Windows you can find the ID via **Devices and Printers**. Find the Logitech U
 ***--usage 0x0001***  
 ***--usagePage 0xFF00***  
 ***--open***  
-***--length **7***  
+***--length 7***  
 All thes options are just defaults, you can ignore those
 
 ***--send-output 0x10,0x01,0x09,0x1e,0x01,0x00,0x00***  
