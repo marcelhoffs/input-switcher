@@ -41,3 +41,14 @@ In Windows you can use Logitech Options to bind the key to the **switch_to_2.vbs
 ## 4.2 - Linux key binding
 In Linux it depends on the desktop environment you use. In Gnome you can do it via: **Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts**
 ![Gnome](/images/gnome.png)
+
+# 5 - Detailed setup
+Now you know how to set it up, but it probably does not work yet. This is because the delivered script files are geared toward a specific setup.
+You will have to figure out what the correct command is that you have to send to your devices for them to switch.
+
+Take the command for Windows for example:
+.\hidapitester.exe --vidpid 046D:C52B --usage 0x0001 --usagePage 0xFF00 --open --length 7 --send-output 0x10,0x01,0x09,0x1e,0x01,0x00,0x00
+
+--vidpid 046D:C52B
+This is the ID of the Logitech Unifying receiver that is plugged in to the Windows machine. Normally this ID is the same for all receivers. In Windows you can find the ID through your device manager.
+![Devices](/images/find_hardware_id.png)
