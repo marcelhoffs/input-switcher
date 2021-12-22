@@ -71,16 +71,16 @@ All thes options are just defaults, you can ignore those
 ***--send-output 0x10,0x01,0x09,0x1e,0x01,0x00,0x00***  
 This is the important part, because this command tells which device to do what.
 
-Let's take this command: *0x10,0x01,0x09,0x1e,0x01,0x00,0x00*  
-And rewrite it as: *A,B,C,D,E,F,G*
+Let's take this command: ***0x10,0x01,0x09,0x1e,0x01,0x00,0x00***  
+And rewrite it as: ***A,B,C,D,E,F,G***
 
-A = always 0x10, although Solaar seems to use 0x11
-B = This is the number of the device that is linked to the Unifying receiver: 0x01 for the first device (the keyboard), 0x02 for the second device (the mouse)
-C = ?
-D = ?
-E = This is the channel to switch to: 0x00 for channel 1, 0x01 for channel 2
-F = always 0x00 
-G = always 0x00
+*A = always 0x10, although Solaar seems to use 0x11*  
+*B = This is the number of the device that is linked to the Unifying receiver: 0x01 for the first device (the keyboard), 0x02 for the second device (the mouse)*  
+*C = ?*  
+*D = ?*  
+*E = This is the channel to switch to: 0x00 for channel 1, 0x01 for channel 2*  
+*F = always 0x00*  
+*G = always 0x00*  
 
 So value of C and D are unknown... how to figure that out?
 You can use Solaar on Linux. 
