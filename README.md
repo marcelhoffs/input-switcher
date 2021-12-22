@@ -28,5 +28,8 @@ sudo cp * \usr\bin
 ```
 Now in your desktop environment of choice, define a custom shortcut. In my case I have used the "Menu" key on my keyboard and assigned it to execute \usr\bin\switch_to_1.sh
 
-# 3.1 - switch_to_1.sh
+## 3.1 - switch_to_1.sh
 This is a simple shell script for Linux to switch the input to channel 1.
+
+4 - Bind the scripts to a key
+Personally I use this key to bind the scripts to in both Windows and Linux.
