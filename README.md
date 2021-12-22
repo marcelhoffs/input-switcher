@@ -33,3 +33,4 @@ This is a simple shell script for Linux to switch the input to channel 1.
 
 4 - Bind the scripts to a key
 Personally I use this key to bind the scripts to in both Windows and Linux.
+![Keyboard](/blob/master/images/keyboard.png)
