@@ -49,16 +49,17 @@ You will have to figure out what the correct command is that you have to send to
 Take the command for Windows for example:
 *.\hidapitester.exe --vidpid 046D:C52B --usage 0x0001 --usagePage 0xFF00 --open --length 7 --send-output 0x10,0x01,0x09,0x1e,0x01,0x00,0x00*
 
-*--vidpid 046D:C52B  *
+*--vidpid 046D:C52B
+*
 This is the ID of the Logitech Unifying receiver that is plugged in to the Windows machine. Normally this ID is the same for all receivers. 
 In Linux you can easily find this by running the **lsusb** commmand in a terminal.
 In Windows you can find the ID via **Devices and Printers**. Find the Logitech Unifying Receiver and check the Hardware ID of the USB Composite Device.
 ![Devices](/images/find_hardware_id.png)
 
-*--usage 0x0001  
---usagePage 0xFF00  
---open  
---length 7  *
+*--usage 0x0001*  
+*--usagePage 0xFF00*
+*--open*
+*--length 7*
 All thes options are just defaults, you can ignore those
 
 *--send-output 0x10,0x01,0x09,0x1e,0x01,0x00,0x00*
