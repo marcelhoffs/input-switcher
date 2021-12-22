@@ -19,3 +19,5 @@ cd linux
 sudo cp * \usr\bin
 ```
 Now in your desktop environment of choice, define a custom shortcut. In my case I have used the "Menu" key on my keyboard and assigned it to execute \usr\bin\switch_to_1.sh
+
+hello
