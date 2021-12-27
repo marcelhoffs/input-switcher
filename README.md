@@ -18,7 +18,7 @@ The **windows** folder contains the following files:
 - switch_to_2.vbs
 - hidapitester.exe
 
-Create the folling folder **c:\Program Files\InputSwitcher** and copy the 3 files into this folder.
+Create the following folder **c:\Program Files\InputSwitcher** and copy the 3 files into this folder.
 Now use Logitech Options to assign a custom application to the "Menu" key and have it execute the program: **C:\Program Files\InputSwitcher\switch_to_2**.vbs.
 
 ## 2.1 - switch_to_2.bat
