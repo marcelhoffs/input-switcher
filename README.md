@@ -19,10 +19,10 @@ The **windows** folder contains the following files:
 - hidapitester.exe
 
 Create the following folder **c:\Program Files\InputSwitcher** and copy the 3 files into this folder.
-Now use Logitech Options to assign a custom application to the "Menu" key and have it execute the program: **C:\Program Files\InputSwitcher\switch_to_2**.vbs.
+Now use Logitech Options to assign a custom application to the "Menu" key and have it execute the program: **C:\Program Files\InputSwitcher\switch_to_2.vbs**.
 
 ## 2.1 - switch_to_2.bat
-This simple batch script switchers the input to channel 2.
+This simple batch script switches the input to channel 2.
 
 ## 2.2 - switch_to_2.vbs
 This is a Visual Basic script that is just a wrapper around switch_to_2.bat. If you would execute switch_to_2.bat you would get a command prompt window that pops up every time. The switch_to_2.vbs script prevents this. So if you bind this script to a key on your keyboard you can switch to another channel without windows popping up.
