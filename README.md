@@ -31,9 +31,9 @@ This is a Visual Basic script that is just a wrapper around switch_to_2.bat. If 
 From the **Linux** folder, copy both files (switch_to_1.sh & hidapitester) to: **\usr\bin**
 ```
 cd linux
-sudo cp * \usr\bin
+sudo cp * /usr/bin
 ```
-Now in your desktop environment of choice, define a custom shortcut. In my case I have used the "Menu" key on my keyboard and assigned it to execute **\usr\bin\switch_to_1.sh**.
+Now in your desktop environment of choice, define a custom shortcut. In my case I have used the "Menu" key on my keyboard and assigned it to execute **/usr/bin/switch_to_1.sh**.
 
 ## 3.1 - switch_to_1.sh
 This is a simple shell script for Linux to switch the input to channel 1.
