@@ -28,7 +28,7 @@ This simple batch script switches the input to channel 2.
 This is a Visual Basic script that is just a wrapper around switch_to_2.bat. If you would execute switch_to_2.bat you would get a command prompt window that pops up every time. The switch_to_2.vbs script prevents this. So if you bind this script to a key on your keyboard you can switch to another channel without windows popping up.
 
 # 3 - Linux
-From the **Linux** folder, copy both files (switch_to_1.sh & hidapitester) to: **\usr\bin**
+From the **Linux** folder, copy both files (switch_to_1.sh & hidapitester) to: **/usr/bin**
 ```
 cd linux
 sudo cp * /usr/bin
