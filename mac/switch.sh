@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# KYB_CH = channel on unifying receiver for the destination device. Typically maps to the 1 minus the key # you press to switch keyboards
+# KYB_CH = channel on unifying receiver for the destination keyboard. Typically maps to the 1 minus the key # you press to switch keyboards
 KYB_CH=0x00
 # KYB_ID = ID of the keyboard (typically this maps to the order of keyboard devices you see in the unifying software app in Advanced settings)
 KYB_ID=0x03
 
-# MSE_CH = channel on unifying receiver for the destination device. Typically maps to the 1 minus the key # you press to switch keyboards
+# MSE_CH = channel on unifying receiver for the destination mouse. Typically maps 1 minus the channel button you press on the mouse to switch
 MSE_CH=0x00
-# MSE_ID = ID of the keyboard (typically this maps to the order of keyboard devices you see in the unifying software app in Advanced settings)
+# MSE_ID = ID of the mouse (typically this maps to the order of mouse devices you see in the unifying software app in Advanced settings)
 MSE_ID=0x02
 
 # These typically don't change, but tap Apple menu->About This Mac->System Report->USB->USB Receiver for Logitech 
