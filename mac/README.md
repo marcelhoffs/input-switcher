@@ -1,4 +1,4 @@
-# Logitech MX - Input Switcher instructios for Mac
+# Logitech MX - Input Switcher instructions for Mac
 
 ## Summary
 There is one script provided, `switch.sh`. This same script needs to be deployed across as many Mac computers as you are controlling via MX Mouse and Keys. You only need to make changes to `KYB_CH`, `KYB_ID`, `MSE_CH` and `MSE_ID` depending on your configuration. Please read the comments. You should not have to change the `RCVR_PID` and `RCVR_VID` variables but always good to check as described in the comments.
