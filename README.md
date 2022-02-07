@@ -38,6 +38,8 @@ Now in your desktop environment of choice, define a custom shortcut. In my case 
 ## 3.1 - switch_to_1.sh
 This is a simple shell script for Linux to switch the input to channel 1.
 
+# 4 - Mac
+To get this working on a Mac refer to [the Mac README](mac/README.md)
 # 4 - Bind the scripts to a key
 Personally I use this key to bind the scripts to in both Windows and Linux.
 ![Keyboard](/images/keyboard.png)
