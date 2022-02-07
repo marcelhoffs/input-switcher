@@ -40,18 +40,18 @@ This is a simple shell script for Linux to switch the input to channel 1.
 
 # 4 - Mac
 To get this working on a Mac refer to [the Mac README](mac/README.md)
-# 4 - Bind the scripts to a key
+# 5 - Bind the scripts to a key
 Personally I use this key to bind the scripts to in both Windows and Linux.
 ![Keyboard](/images/keyboard.png)
 
-## 4.1 - Windows key binding
+## 5.1 - Windows key binding
 In Windows you can use Logitech Options to bind the key to the **switch_to_2.vbs** script.
 
-## 4.2 - Linux key binding
+## 5.2 - Linux key binding
 In Linux it depends on the desktop environment you use. In Gnome you can do it via: **Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts**
 ![Gnome](/images/gnome.png)
 
-# 5 - Modify the scripts
+# 6 - Modify the scripts
 Now you know how to set it up, but it probably does not work yet. This is because the delivered script files are geared toward a specific setup.
 You will have to figure out what the correct command is that you have to send to your devices for them to switch.
 
