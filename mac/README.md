@@ -25,5 +25,5 @@ I like to use my central mouse button to switch as well as my calculator key on 
 Go to your 'Logi Options+ app', click on your keyboard, select the key you want to override, in actions, select 'Open an application' and put in `/usr/local/bin/switch.sh`. Because you associated this script to your terminal app, it will be executed when you press the key.
 
 ### Bind to MX Mouse
-Go to your 'Logi Options+ app', click on your mouse, select the mouse button you want to override, in actions, select 'Open an application' and put in `/usr/local/bin/switch.sh`. Because you associated this script to your terminal app, it will be executed when you press the key.
+Go to your 'Logi Options+ app', click on your mouse, select the mouse button you want to override, in actions, select 'Open an application' and put in `/usr/local/bin/switch.sh`. Because you associated this script to your terminal app, it will be executed when you press the key. Note that I've found mouse integration iffy. Depending on which window you are focussed on, and what mouseevents it grabs, this may not always reliably work. Keyboard integration works all the time.
 
