@@ -11,6 +11,9 @@ What you have basically done above is to make sure if the file is 'opened' it wi
 
 **Note:** If you are not able to run the bundled hidapitester executable (security permissions), you can either go to your security settings (System Preferences->Security & Privacy) and allow the application to be run, or,  follow instructions [here](https://github.com/todbot/hidapitester) to compile your own version.
 
+## Modify the script
+
+You'll need to modify the script to point to the right channels and device IDs. Please read the comments inside the script as well as [the main README section](https://github.com/marcelhoffs/input-switcher#5---modify-the-scripts) on values to use
 ## Test it
 Before you do any keyboard automation, try running `switch.sh` from your command line. If your keyboard and mouse don't transfer over, you need to change 
 the variables. When you are sure the script works, move to the next step.
