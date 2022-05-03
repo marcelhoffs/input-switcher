@@ -1,0 +1,28 @@
+# This rule to allow users (non-root) to have raw access to Logitech receiver
+
+ACTION != "add", GOTO="endrule"
+SUBSYSTEM != "hidraw", GOTO="endrule"
+
+# USB-connected Logitech receivers and devices
+ATTRS{idVendor}=="046d", GOTO="applyrule"
+
+# Lenovo nano receiver
+ATTRS{idVendor}=="17ef", ATTRS{idProduct}=="6042", GOTO="applyrule"
+
+# Bluetooth-connected Logitech devices
+KERNELS == "0005:046D:*", GOTO="applyrule"
+
+GOTO="endrule"
+
+LABEL="applyrule"
+
+# Allow any seated user to access the receiver.
+# uaccess: modern ACL-enabled udev
+# udev-acl: for Ubuntu 12.10 and older
+TAG+="uaccess", TAG+="udev-acl"
+
+# Grant members of the "plugdev" group access to receiver (useful for SSH users)
+#MODE="0660", GROUP="plugdev"
+
+LABEL="endrule"
+# vim: ft=udevrules

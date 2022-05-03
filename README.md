@@ -31,8 +31,15 @@ This is a Visual Basic script that is just a wrapper around switch_to_2.bat. If 
 From the **Linux** folder, copy both files (switch_to_1.sh & hidapitester) to: **/usr/bin**
 ```
 cd linux
-sudo cp * /usr/bin
+sudo cp hidapitester /usr/bin
+sudo cp switch_to_1.sh /usr/bin
+sudo cp 42-logitech-unify.rules /usr/lib/udev/rules.d
+chmod +x /usr/bin/hidapitester
+chmod +x /usr/bin/switch_to_1.sh
 ```
+If you have Solaar installed copying the 42-logitech-unify.rules file is not needed. If you don't have Solaar installed you will probably notice that hidapitester does not work without root permissions (e.g. via sudo). This is because non-root users do not have raw access to the hid devices by default.
+So the 42-logitech-unify.rules file is a udev rule that allows raw access to the Logitech Unify receiver for non-root users. You might have to unplug your receiver and plug it in again.
+
 Now in your desktop environment of choice, define a custom shortcut. In my case I have used the "Menu" key on my keyboard and assigned it to execute **/usr/bin/switch_to_1.sh**.
 
 ## 3.1 - switch_to_1.sh
