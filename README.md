@@ -45,8 +45,12 @@ Now in your desktop environment of choice, define a custom shortcut. In my case 
 ## 3.1 - switch_to_1.sh
 This is a simple shell script for Linux to switch the input to channel 1.
 
+## 3.2 - 42-logitech-unify.rules
+As explained earlier, this is a udev rule to allow non-root users raw access to the Unify receiver. As in write commands to it.
+
 # 4 - Mac
 To get this working on a Mac refer to [the Mac README](mac/README.md)
+
 # 5 - Bind the scripts to a key
 Personally I use this key to bind the scripts to in both Windows and Linux.
 ![Keyboard](/images/keyboard.png)
