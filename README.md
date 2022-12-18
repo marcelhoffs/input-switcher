@@ -5,7 +5,7 @@ The application and scripts provided in this repository let you switch your Logi
 The repository contains the hidapitester tool for both Windows and Linux.
 If you prefer to use the most current version you can download this here: https://github.com/todbot/hidapitester
 
-What you need is 2 Logitech Unifying receivers. One for your Windows machine and one for your Linux machine. 
+What you need is 2 Logitech Unifying/Bolt receivers or bluetooth connection. One for your Windows machine and one for your Linux machine. 
 Then take one receiver and first connect the keyboard to it and then the mouse. Make sure that both are connected on channel 1.
 Take the second receiver and first connect the keyborad to it and then the mouse. Make sure that both are connected on channel 2.
 The first receiver connects to the Windows machine, the second to the Linux machine.
@@ -144,3 +144,14 @@ Mouse to channel 2    : 0x10,0x02,0x0a,0x1b,0x01,0x00,0x00
 **On Linux**  
 Keyboard to channel 1 : 0x10,0x01,0x09,0x1e,0x00,0x00,0x00  
 Mouse to channel 1    : 0x10,0x02,0x0a,0x1b,0x00,0x00,0x00  
+
+If you want use bluetootch conneciton you need find proper device by using:
+***.\hidapitester.exe --list-deteils***
+then you need use 11 bytes long message (HID++)
+
+***.\hidapitester.exe --vidpid 046D:B367 --usage 0x0202 --usagePage 0xff43 --open --length 11 --send-output 0x11,0x00,0x09,0x1E,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00***
+
+
+
+Keyboard to channel 2: 0x11,0x00,0x09,0x1E,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Mouse (MX Master 3S) to channel 2: 0x11,0x00,0x0A,0x1E,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
