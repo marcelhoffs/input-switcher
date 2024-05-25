@@ -99,7 +99,7 @@ So value of C and D are unknown... how to figure that out? Well to do that, we w
 Install Solaar on Linux and make sure that your keyboard and mouse are connected to channel 2, the Linux machine.
 Now open a terminal and execute the following command. This instructs Solaar to switch the device with the name "MX Keys" (the keyboard) to channel 1. So basically you command it to switch the keyboard back to Windows:
 
-*solaar -dd config "MX Keys" change-host 1*
+*solaar -ddd config "MX Keys" change-host 1*
 
 You should see your keyboard switch to channel 1 and it is connected to Windows again. At the end of the log you will see something like this:
 
@@ -135,6 +135,9 @@ Now repeat this for the mouse and you will get this:
 *G = always 0x00*  
 
 So C is specific to the device. In my case 09 is for the MX Keys keyboard and 0A for the MX Anywhere 3 mouse. This will probably be different in your case.
+
+> ⚠️ If you are having issues getting commands to work on one Windows computer that you extracted from Solaar on another computer, the device number (B) may be different on the different receivers, especially if you have reused a receiver from a different device set. Physically swap the receivers to each computer during testing to verify the numbering.
+
 So in conclusion this is what you have to put in your bat (on Windows) and shell script (on Linux):
 
 **On Windows**  
