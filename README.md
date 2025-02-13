@@ -62,6 +62,17 @@ In Windows you can use Logitech Options to bind the key to the **switch_to_2.vbs
 In Linux it depends on the desktop environment you use. In Gnome you can do it via: **Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts**
 ![Gnome](/images/gnome.png)
 
+### In case the key you want to map is not recognized (GNOME environment)
+
+You can download the awesome [Input Remapper](https://github.com/sezanzeb/input-remapper) tool, which allows you to detect your Logitech devices and more. 
+1. Run the tool and click on the device (e.g., Logitech MX Keys) to land in the Presets tab.
+2. Create a new Preset, double click it and land into the editor.
+3. In the bottom left side of the window, click on the add button below "Input", press "Record" and press the button that you want to remap.
+4. In output, you can create a new Macro. Target keybard and press your combination of choice. This combination will be the one that you'll use to trigger the key binding in GNOME. I created something that I will never press: Control_L + Alt_L + Super_L + period
+5. Once it has been created, give this preset a name, press the down arrow next to the rename field, and press apply.
+6. You now can go in GNOME's custom shortcut editor and specify the script you want to run.
+7. Remember to make sure that the script you created is executable and that hidapitester can as root (you have multiple choices, which have a number of security implications -- suid .sh script, sudo nopasswd for hidapitester... make an informed decision)
+
 # 6 - Modify the scripts
 Now you know how to set it up, but it probably does not work yet. This is because the delivered script files are geared toward a specific setup.
 You will have to figure out what the correct command is that you have to send to your devices for them to switch.
