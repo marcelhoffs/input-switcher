@@ -14,6 +14,32 @@ What you have basically done above is to make sure if the file is 'opened' it wi
 ## Modify the script
 
 You'll need to modify the script to point to the right channels and device IDs. Please read the comments inside the script as well as [the main README section](https://github.com/marcelhoffs/input-switcher#5---modify-the-scripts) on values to use
+
+### In case you cannot install Solaar and have troubles finding the right values
+
+Another solution to find the right values can be achieved via your second device. My second device is a Linux machine. 
+Following the instructions reported in the README, you have to run the command 
+```
+solaar -ddd config "MX Keys" change-host 1
+```
+In case you want to find the IDs for another device (let's say, MX Master 2), you can run the following command: 
+```
+solaar -ddd config "MX Master" change-host 1
+```
+By doing so, you will find the right string. In my case, I'm using for both devices the universal receiver. 
+The obtained string looks like: 
+```
+                                             B  C D
+(keybo) logitech_receiver.base: (18) <= w[11 01 0918 00000000000000000000000000000000]
+(mouse) logitech_receiver.base: (18) <= w[11 02 091A 00000000000000000000000000000000]
+```
+For the keyboard, B is 01, and for the mouse is 02. This changes for each system, but at least I can now populate my Linux script.
+C is 09 for both devices.
+D is 18 for my keyboard and 1A for my mouse. 
+
+I can replace then these values in my Mac as well. The only value I'm left with to calculate is B, which can be easily obtained via trial and error (to my understanding, values should be from 1 to 4, depending on how many devices you can connect to your receiver.
+
+
 ## Test it
 Before you do any keyboard automation, try running `switch.sh` from your command line. If your keyboard and mouse don't transfer over, you need to change 
 the variables. When you are sure the script works, move to the next step.
