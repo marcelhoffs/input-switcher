@@ -169,3 +169,12 @@ then you need to use 11 bytes long message (HID++)
 
 Keyboard to channel 2: 0x11,0x00,0x09,0x1E,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
 Mouse (MX Master 3S) to channel 2: 0x11,0x00,0x0A,0x1E,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+
+# 7 Find commands using Wireshark USB capture
+It is very easy to capture USB traffic via Wireshark and find commands send to the HID devices. Install [Wireshark](https://www.wireshark.org) including USBPcap and start tracing the USB Hub the dongle is connected. Filter protocol USBHID to find the SET_REPORT request changing the channel or other actions applied to the Logitech device. You can trigger commands using Logitech Options+. The data fragment is excatly the command you need for hidapitester.exe like shown in this example:
+
+**Switch Logitech Craft Keyboard to Channel 3**
+
+*.\hidapitester.exe --vidpid 046D:C52B --usage 0x0001 --usagePage 0xFF00 --open --length 7 --send-output 0x10,0x05,0x08,0x1a,0x02,0x00,0x00*
+
+![Wireshark](/images/wireshark.png)
